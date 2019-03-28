@@ -1,0 +1,21 @@
+{
+  "name": "uva-usd-twitter.bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:arisanguinetti/uva-usd-twitter-bot.git",
+  "author": "Ariel Sanguinetti <hello@arielsanguinetti.com.ar>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon -r esm index.js --ignore db.json"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "esm": "^3.2.21",
+    "express": "^4.16.4",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
