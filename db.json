@@ -1,14 +1,206 @@
 {
   "uvaValues": [
     {
-      "date": 1553816534961,
+      "date": 1553822821659,
+      "value": 33.89
+    },
+    {
+      "date": 1553822941662,
+      "value": 33.89
+    },
+    {
+      "date": 1553823001514,
+      "value": 33.89
+    },
+    {
+      "date": 1553823061444,
+      "value": 33.89
+    },
+    {
+      "date": 1553823122361,
+      "value": 33.89
+    },
+    {
+      "date": 1553823181431,
+      "value": 33.89
+    },
+    {
+      "date": 1553823241461,
+      "value": 33.89
+    },
+    {
+      "date": 1553823301660,
+      "value": 33.89
+    },
+    {
+      "date": 1553823361500,
+      "value": 33.89
+    },
+    {
+      "date": 1553823421480,
+      "value": 33.89
+    },
+    {
+      "date": 1553823481518,
       "value": 33.89
     }
   ],
   "usdValues": [
     {
-      "date": 1553816534963,
-      "value": 43.63
+      "date": 1553822821660,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553822941663,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823001514,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823061445,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823122362,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823181432,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823241462,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823301660,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823361501,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823421480,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    },
+    {
+      "date": 1553823481522,
+      "value": {
+        "comprador": 42.6,
+        "vendedor": 44.6
+      }
+    }
+  ],
+  "uvaUsdValues": [
+    {
+      "date": 1553823421483,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553823301660,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553823181432,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553823061446,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553822941664,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553822821663,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553823001518,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553823122363,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553823241465,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553823361504,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
+    },
+    {
+      "date": 1553823481522,
+      "values": {
+        "vendedor": "1.32",
+        "comprador": "1.26"
+      }
     }
   ]
 }
