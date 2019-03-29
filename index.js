@@ -1,6 +1,6 @@
 import express from 'express'
 import { findUVAValue, findUSDValue } from "./lib/scraper";
-import db from './lib/db'
+import './lib/db'
 import './lib/cron'
 
 const app = express();
