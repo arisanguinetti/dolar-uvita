@@ -1,36 +1,30 @@
-import express from 'express';
-import cors from 'cors';
-import { findUVAValue, findUSDValue } from './lib/scraper';
-import db from './lib/db';
-import './lib/cron';
-import { uniqueCount, uniqueCountObjects, sortObject } from './lib/utils';
+const express = require('express');
+const cors = require('cors');
+const db = require('./lib/db');
+require('./lib/cron');
+const asyncHandler = require('./lib/asyncHandler');
+const { uniqueCount, uniqueCountObjects, sortObject } = require('./lib/utils');
 
 const app = express();
 
 app.use(cors());
 
-app.get('/scrape', async (req, res, next) => {
-  const [uvaValue, usdValue] = await Promise.all([
-    findUVAValue(),
-    findUSDValue(),
-  ]);
+app.get(
+  '/data',
+  asyncHandler(async (req, res, next) => {
+    const { uvaValues, usdValues, uvaUsdValues } = db.value();
 
-  res.json({ uvaValue, usdValue });
-});
+    const uva = uniqueCount(uvaValues);
+    const usd = uniqueCountObjects(usdValues);
+    const uvaUsd = uvaUsdValues.sort(sortObject);
 
-app.get('/data', async (req, res, next) => {
-  const { uvaValues, usdValues, uvaUsdValues } = db.value();
-
-  const uva = uniqueCount(uvaValues);
-  const usd = uniqueCountObjects(usdValues);
-  const uvaUsd = uvaUsdValues.sort(sortObject);
-
-  return res.json({
-    uva,
-    usd,
-    uvaUsd,
-  });
-});
+    return res.json({
+      uva,
+      usd,
+      uvaUsd,
+    });
+  })
+);
 
 const PORT = process.env.port || 2093;
 
