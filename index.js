@@ -1,9 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-const db = require('./lib/db');
-require('./lib/cron');
+const { connectDB } = require('./lib/db');
+// require('./lib/cron');
 const asyncHandler = require('./lib/asyncHandler');
-const { uniqueCount, uniqueCountObjects, sortObject } = require('./lib/utils');
+const { UvaModel, UsdModel, UsdUvaModel } = require('./lib/models');
+const { uniqueCount, uniqueCountObjects } = require('./lib/utils');
 
 const app = express();
 
@@ -12,22 +13,28 @@ app.use(cors());
 app.get(
   '/data',
   asyncHandler(async (req, res, next) => {
-    const { uvaValues, usdValues, uvaUsdValues } = db.value();
+    const uvaValues = await UvaModel.getUnique();
+    const usdValues = await UsdModel.getUnique();
+    const usdUvaValues = await UsdUvaModel.getUnique();
 
     const uva = uniqueCount(uvaValues);
     const usd = uniqueCountObjects(usdValues);
-    const uvaUsd = uvaUsdValues.sort(sortObject);
+    const usdUva = uniqueCountObjects(usdUvaValues);
 
     return res.json({
       uva,
       usd,
-      uvaUsd,
+      usdUva,
     });
   })
 );
 
 const PORT = process.env.port || 2093;
 
-app.listen(PORT, () => {
-  console.log(`App running on http://localhost:${PORT}`);
-});
+connectDB()
+  .then(() =>
+    app.listen(PORT, () => {
+      console.log(`App running on http://localhost:${PORT}`);
+    })
+  )
+  .catch(err => console.log(err));
