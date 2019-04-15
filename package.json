@@ -6,8 +6,9 @@
   "author": "Ariel Sanguinetti <hello@arielsanguinetti.com.ar>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon -r esm index.js --ignore db.json",
-    "sync": "nodemon -r esm lib/syncToMongo.js --ignore db.json",
+    "dev": "nodemon index.js",
+    "cron": "nodemon cron.js",
+    "sync": "nodemon lib/syncToMongo.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest --watch",
