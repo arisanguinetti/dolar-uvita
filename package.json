@@ -6,7 +6,9 @@
   "author": "Ariel Sanguinetti <hello@arielsanguinetti.com.ar>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon -r esm index.js --ignore db.json",
+    "dev": "nodemon index.js",
+    "cron": "nodemon cron.js",
+    "sync": "nodemon lib/syncToMongo.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest --watch",
@@ -22,8 +24,10 @@
     "lowdb": "^1.0.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
+    "mongoose": "^5.5.1",
     "node-cron": "^2.0.3",
-    "twitter": "^1.7.1"
+    "twitter": "^1.7.1",
+    "validator": "^10.11.0"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
