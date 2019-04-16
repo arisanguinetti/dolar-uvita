@@ -21,6 +21,5 @@ connectDB()
       scheduled: true,
       timezone: 'America/Argentina/Buenos_Aires',
     });
-    runCron();
   })
   .catch(err => console.log(err));
