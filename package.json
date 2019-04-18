@@ -6,12 +6,12 @@
   "author": "Ariel Sanguinetti <hello@arielsanguinetti.com.ar>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js",
-    "cron": "nodemon cron.js",
-    "sync": "nodemon lib/syncToMongo.js",
+    "dev": "node index.js",
+    "cron": "node cron.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "jest --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "dependencies": {
@@ -19,9 +19,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
-    "esm": "^3.2.21",
     "express": "^4.16.4",
-    "lowdb": "^1.0.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
     "mongoose": "^5.5.1",
