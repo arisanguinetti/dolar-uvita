@@ -25,7 +25,7 @@
     "mongoose": "^5.5.1",
     "node-cron": "^2.0.3",
     "twitter": "^1.7.1",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
